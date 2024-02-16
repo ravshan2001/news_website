@@ -1,0 +1,10 @@
+{% extends 'news/base.html' %}
+{% load static %}
+
+{% block content %}
+    <h2 class="text-center">Ro'yxatdan o'tish uchun quyidagi formani to'ldiring: </h2>
+    <form method="post"> {% csrf_token %}
+        {{user_form.as_p}}
+        <button type="submit" class="btn btn-danger ml-2">Ro'yxatdan o'tish </button>
+    </form>
+{% endblock %}

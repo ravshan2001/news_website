@@ -1,0 +1,17 @@
+{% extends 'news/base.html' %}
+{% load static %}
+
+{% block content %}
+
+    <h2>Xush kelibsiz {{user.username}}</h2>
+    <h2>Sizning ma'lumotlaringiz</h2>
+    <h3>Username: {{user.username}}</h3>
+    <img src="{{user.profile.photo.url}}" height="30%">
+    <h3>Tug'ilgan sana: {{user.profile.date_of_birth}}</h3>
+    <h3>Email: {{user.email}}</h3>
+    <h3>Ismingiz: {{user.first_name}}</h3>
+    <h3>Familyangiz: {{user.last_name}}</h3>
+    <h4><a href="{% url 'password_change' %}" style="color: red">Parolni o'zgartirish</a>|<a href="{% url 'edit_user' %}" style="color: red">Profilni o'zgartirish</a></h4>
+    <h4><a href="{% url 'logout' %}" style="color: orange">Chiqish</a></h4>
+
+{% endblock %}

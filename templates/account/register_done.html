@@ -1,0 +1,7 @@
+{% extends 'news/base.html' %}
+{% load static %}
+
+{% block content %}
+    <h2 class="text-center">Ro'yxatdan muvaffaqiyatli o'tildi! Xush kelibsiz {{new_user.first_name}}!</h2>
+    <p>Endi saytga <a href="{% url 'login' %}">kirishingiz</a> mumkin</p>
+{% endblock %}
